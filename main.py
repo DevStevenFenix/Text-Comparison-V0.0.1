@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import scrolledtext
 
-#funcion de botones, por lo pronto esta funcion es para que no hagan nada.
+#Button Functions
 def donothing():
     filewin = Toplevel(root)
     button = Button(filewin, text='Do nothing')
@@ -22,7 +22,10 @@ def textCompare():
     result.configure(state="normal")
     result.insert('end', finalText)
     result.configure(state='disabled')
-    print (finalText)   
+    print (finalText)
+    
+ 
+###### TKINTER INTERFACE ########
     
 root = tk.Tk()
 root.geometry('1000x500')
@@ -57,7 +60,7 @@ menubar.add_cascade(label='File', menu=filemenu)
 
 
 
-######### COMPONENTES DE LA VENTANA ###########
+######### WINDOW COMPONENTS ###########
 
 #Editable textbox
 text1 = scrolledtext.ScrolledText(frame2)
@@ -68,7 +71,7 @@ text2.pack()
 #Textbox for revised Text 
 result = Text(frame4, state='disabled')
 
-#Boton de Comparacion
+#Comparison Button
 buttonComp = Button(frame5, text="Compare", command=textCompare)
 buttonComp.pack()
 
